@@ -51,13 +51,19 @@ namespace fem_i_rad
                 there_is_a_winner = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 there_is_a_winner = true;
-            
+
             // Verticalla checks
-           else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+            else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled))
                 there_is_a_winner = true;
             else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
+                there_is_a_winner = true;
+
+            // Diagonalla checks
+            else if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+                there_is_a_winner = true;
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
                 there_is_a_winner = true;
 
             if (there_is_a_winner)
@@ -88,21 +94,47 @@ namespace fem_i_rad
 
         private void disablebuttons()
         {
-            try
+            
+
+
+                foreach (Control c in Controls)
+                {
+                    Button b = (Button)c;
+                    if (b.Tag == null ){
+                        b.Enabled = false;
+                    }
+                   
+                }//foreach slut
+            
+            
             {
 
-            
-            foreach (Control c in Controls)
-            {
-                Button b = (Button)c;
-                b.Enabled = false;
-                }//foreach slut
-            }
-            catch
-            {
-                    
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            turn = true;
+            turn_count = 0;
+
+
+            foreach (Control c in Controls)
+            {
+                Button b = (Button)c;
+                if (b.Tag == null)
+                {
+                    b.Enabled = true;
+
+                    b.Text = "";
+                }
+
+
+            }//foreach slut
+        }
+
+
+
     }
 }
+    
+
