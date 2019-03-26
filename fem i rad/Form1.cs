@@ -14,7 +14,11 @@ namespace fem_i_rad
     {
         bool turn = true; //När det blir true så är det X:s turn to go,false = O:s turn
 
+        int player1_count = 0;
+        int player2_count = 0;
         int turn_count = 0;
+        
+
 
         public Form1()
         {
@@ -76,6 +80,8 @@ namespace fem_i_rad
                 else
                     winner = "X";
 
+                score.Text = winner + " winner";
+
                 MessageBox.Show(winner + "Wins!", "Yay!");
             }
             else
@@ -94,18 +100,24 @@ namespace fem_i_rad
 
         private void disablebuttons()
         {
-            
+            try
+            {
+
+
 
 
                 foreach (Control c in Controls)
                 {
                     Button b = (Button)c;
-                    if (b.Tag == null ){
+                    if (b.Tag == null)
+                    {
                         b.Enabled = false;
                     }
-                   
+
                 }//foreach slut
-            
+            }
+            catch { }
+           
             
             {
 
@@ -132,8 +144,15 @@ namespace fem_i_rad
             }//foreach slut
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void score_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
     

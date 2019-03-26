@@ -40,12 +40,13 @@
             this.C3 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C1 = new System.Windows.Forms.Button();
+            this.score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(12, 409);
+            this.button1.Location = new System.Drawing.Point(3, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 36);
             this.button1.TabIndex = 0;
@@ -69,7 +70,7 @@
             // A1
             // 
             this.A1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A1.Location = new System.Drawing.Point(97, 40);
+            this.A1.Location = new System.Drawing.Point(97, 58);
             this.A1.Name = "A1";
             this.A1.Size = new System.Drawing.Size(125, 111);
             this.A1.TabIndex = 2;
@@ -79,7 +80,7 @@
             // A2
             // 
             this.A2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A2.Location = new System.Drawing.Point(228, 40);
+            this.A2.Location = new System.Drawing.Point(228, 58);
             this.A2.Name = "A2";
             this.A2.Size = new System.Drawing.Size(125, 111);
             this.A2.TabIndex = 3;
@@ -89,7 +90,7 @@
             // A3
             // 
             this.A3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A3.Location = new System.Drawing.Point(359, 40);
+            this.A3.Location = new System.Drawing.Point(359, 58);
             this.A3.Name = "A3";
             this.A3.Size = new System.Drawing.Size(125, 111);
             this.A3.TabIndex = 4;
@@ -99,7 +100,7 @@
             // B1
             // 
             this.B1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B1.Location = new System.Drawing.Point(97, 157);
+            this.B1.Location = new System.Drawing.Point(97, 175);
             this.B1.Name = "B1";
             this.B1.Size = new System.Drawing.Size(125, 111);
             this.B1.TabIndex = 5;
@@ -109,7 +110,7 @@
             // B2
             // 
             this.B2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B2.Location = new System.Drawing.Point(228, 157);
+            this.B2.Location = new System.Drawing.Point(228, 175);
             this.B2.Name = "B2";
             this.B2.Size = new System.Drawing.Size(125, 111);
             this.B2.TabIndex = 6;
@@ -119,7 +120,7 @@
             // B3
             // 
             this.B3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B3.Location = new System.Drawing.Point(359, 157);
+            this.B3.Location = new System.Drawing.Point(359, 175);
             this.B3.Name = "B3";
             this.B3.Size = new System.Drawing.Size(125, 111);
             this.B3.TabIndex = 7;
@@ -128,9 +129,8 @@
             // 
             // C3
             // 
-            this.C3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.C3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C3.Location = new System.Drawing.Point(359, 274);
+            this.C3.Location = new System.Drawing.Point(359, 292);
             this.C3.Name = "C3";
             this.C3.Size = new System.Drawing.Size(125, 111);
             this.C3.TabIndex = 8;
@@ -140,7 +140,7 @@
             // C2
             // 
             this.C2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C2.Location = new System.Drawing.Point(228, 274);
+            this.C2.Location = new System.Drawing.Point(228, 292);
             this.C2.Name = "C2";
             this.C2.Size = new System.Drawing.Size(125, 111);
             this.C2.TabIndex = 9;
@@ -150,12 +150,22 @@
             // C1
             // 
             this.C1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C1.Location = new System.Drawing.Point(97, 274);
+            this.C1.Location = new System.Drawing.Point(97, 292);
             this.C1.Name = "C1";
             this.C1.Size = new System.Drawing.Size(125, 111);
             this.C1.TabIndex = 10;
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.button_Click);
+            // 
+            // score
+            // 
+            this.score.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score.Location = new System.Drawing.Point(171, 9);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(231, 46);
+            this.score.TabIndex = 11;
+            this.score.Click += new System.EventHandler(this.score_Click);
             // 
             // Form1
             // 
@@ -165,6 +175,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(595, 457);
+            this.Controls.Add(this.score);
             this.Controls.Add(this.C1);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C3);
@@ -176,9 +187,11 @@
             this.Controls.Add(this.A1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(617, 513);
             this.Name = "Form1";
             this.Text = "Tic Tac Toe";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -196,6 +209,7 @@
         private System.Windows.Forms.Button C3;
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C1;
+        private System.Windows.Forms.Label score;
     }
 }
 
