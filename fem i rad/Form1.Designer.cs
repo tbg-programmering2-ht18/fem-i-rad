@@ -165,6 +165,7 @@
             this.score.Name = "score";
             this.score.Size = new System.Drawing.Size(231, 46);
             this.score.TabIndex = 11;
+            this.score.Tag = "";
             this.score.Click += new System.EventHandler(this.score_Click);
             // 
             // Form1

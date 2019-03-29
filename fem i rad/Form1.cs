@@ -17,7 +17,6 @@ namespace fem_i_rad
         int player1_count = 0;
         int player2_count = 0;
         int turn_count = 0;
-        
 
 
         public Form1()
@@ -32,16 +31,19 @@ namespace fem_i_rad
 
         private void button_Click(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
-            if (turn)
-                b.Text = "X";
-            else
-                b.Text = "O";
+            if (sender is Button)
+            {
+                Button b = (Button)sender;
+                if (turn)
+                    b.Text = "X";
+                else
+                    b.Text = "O";
 
-            turn = !turn;
-            b.Enabled = false;
-            turn_count++;
-            checkForWinner();
+                turn = !turn;
+                b.Enabled = false;
+                turn_count++;
+                checkForWinner();
+            }
         }
 
         private void checkForWinner()
@@ -108,17 +110,19 @@ namespace fem_i_rad
 
                 foreach (Control c in Controls)
                 {
-                    Button b = (Button)c;
-                    if (b.Tag == null)
+                    if (c is Button)
                     {
-                        b.Enabled = false;
+                        Button b = (Button)c;
+                        if (b.Tag == null)
+                        {
+                            b.Enabled = false;
+                        }
                     }
-
                 }//foreach slut
             }
             catch { }
-           
-            
+
+
             {
 
             }
@@ -132,14 +136,16 @@ namespace fem_i_rad
 
             foreach (Control c in Controls)
             {
-                Button b = (Button)c;
-                if (b.Tag == null)
+                if (c is Button)
                 {
-                    b.Enabled = true;
+                    Button b = (Button)c;
+                    if (b.Tag == null)
+                    {
+                        b.Enabled = true;
 
-                    b.Text = "";
+                        b.Text = "";
+                    }
                 }
-
 
             }//foreach slut
         }
@@ -151,9 +157,9 @@ namespace fem_i_rad
 
         private void score_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
-    
+
 
