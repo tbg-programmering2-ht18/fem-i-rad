@@ -107,7 +107,7 @@ namespace fem_i_rad
 
 
 
-
+                //Resets buttons
                 foreach (Control c in Controls)
                 {
                     if (c is Button)
@@ -133,7 +133,7 @@ namespace fem_i_rad
             turn = true;
             turn_count = 0;
 
-
+            //resets Buttons
             foreach (Control c in Controls)
             {
                 if (c is Button)
@@ -146,6 +146,18 @@ namespace fem_i_rad
                         b.Text = "";
                     }
                 }
+                //resets the score-label
+                if (c is Label)
+                {
+                    Label l = (Label)c;
+
+                    l.Text = "";
+
+
+
+
+                }
+
 
             }//foreach slut
         }
