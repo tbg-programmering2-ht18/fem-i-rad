@@ -139,7 +139,7 @@ namespace fem_i_rad
                 if (c is Button)
                 {
                     Button b = (Button)c;
-                    if (b.Tag == null)
+                    if (b.Tag == null || b.Tag.ToString() =="" )
                     {
                         b.Enabled = true;
 
