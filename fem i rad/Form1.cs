@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace fem_i_rad
 {
@@ -33,6 +34,7 @@ namespace fem_i_rad
         {
             if (sender is Button)
             {
+                //När spelare klickar på en knapp och texten sänds in och skriver det ut
                 Button b = (Button)sender;
                 if (turn)
                     b.Text = "X";
@@ -50,26 +52,26 @@ namespace fem_i_rad
         {
             bool there_is_a_winner = false;
 
-            //Horisontella checks
-            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
+            //Horisontalla checkningar efter vinnare
+            if ((A1.Text == A4.Text) && (A4.Text == A5.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
                 there_is_a_winner = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 there_is_a_winner = true;
 
-            // Verticalla checks
+            // Verticalla checkningar efter vinnare
             else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
-            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled))
+            else if ((A4.Text == B2.Text) && (B2.Text == C2.Text) && (!A4.Enabled))
                 there_is_a_winner = true;
-            else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
+            else if ((A5.Text == B3.Text) && (B3.Text == C3.Text) && (!A5.Enabled))
                 there_is_a_winner = true;
 
-            // Diagonalla checks
+            // Diagonalla checkningar efter vinnare
             else if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
-            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
+            else if ((A5.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
                 there_is_a_winner = true;
 
             if (there_is_a_winner)
@@ -78,7 +80,9 @@ namespace fem_i_rad
 
                 string winner = "";
                 if (turn)
+                    //Om O winner så skrivs O ut
                     winner = "O";
+                //om X winner så skrivs x ut
                 else
                     winner = "X";
 
@@ -88,6 +92,7 @@ namespace fem_i_rad
             }
             else
             {
+                //Om alla 9 knapparna blir använda och det blir lika så winner ingen.
                 if (turn_count == 9)
                     MessageBox.Show("Draw!", "Gae");
             }
@@ -100,6 +105,7 @@ namespace fem_i_rad
 
         }//Avslutar CheckForWinner här
 
+        //Stänger av knapparna
         private void disablebuttons()
         {
             try
@@ -107,7 +113,7 @@ namespace fem_i_rad
 
 
 
-                //Resets buttons
+                //Resetar alla knappar och startar om spelet på nytt
                 foreach (Control c in Controls)
                 {
                     if (c is Button)
@@ -133,7 +139,7 @@ namespace fem_i_rad
             turn = true;
             turn_count = 0;
 
-            //resets Buttons
+            //resetar knapparna
             foreach (Control c in Controls)
             {
                 if (c is Button)
@@ -146,7 +152,7 @@ namespace fem_i_rad
                         b.Text = "";
                     }
                 }
-                //resets the score-label
+                //resets the score-label så den startas om
                 if (c is Label)
                 {
                     Label l = (Label)c;

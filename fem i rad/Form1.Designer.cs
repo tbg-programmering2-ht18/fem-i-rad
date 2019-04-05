@@ -41,8 +41,8 @@
             this.score = new System.Windows.Forms.Label();
             this.A2 = new System.Windows.Forms.Button();
             this.A3 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.A4 = new System.Windows.Forms.Button();
+            this.A5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -173,27 +173,27 @@
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.button_Click);
             // 
-            // button3
+            // A4
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(229, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 111);
-            this.button3.TabIndex = 12;
-            this.button3.Tag = "";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button_Click);
+            this.A4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A4.Location = new System.Drawing.Point(229, 136);
+            this.A4.Name = "A4";
+            this.A4.Size = new System.Drawing.Size(125, 111);
+            this.A4.TabIndex = 12;
+            this.A4.Tag = "";
+            this.A4.UseVisualStyleBackColor = true;
+            this.A4.Click += new System.EventHandler(this.button_Click);
             // 
-            // button4
+            // A5
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(358, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 111);
-            this.button4.TabIndex = 13;
-            this.button4.Tag = "";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.A5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A5.Location = new System.Drawing.Point(358, 136);
+            this.A5.Name = "A5";
+            this.A5.Size = new System.Drawing.Size(125, 111);
+            this.A5.TabIndex = 13;
+            this.A5.Tag = "";
+            this.A5.UseVisualStyleBackColor = true;
+            this.A5.Click += new System.EventHandler(this.button_Click);
             // 
             // Form1
             // 
@@ -202,8 +202,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(595, 549);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.A5);
+            this.Controls.Add(this.A4);
             this.Controls.Add(this.A3);
             this.Controls.Add(this.A2);
             this.Controls.Add(this.score);
@@ -239,8 +239,8 @@
         private System.Windows.Forms.Label score;
         private System.Windows.Forms.Button A2;
         private System.Windows.Forms.Button A3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button A4;
+        private System.Windows.Forms.Button A5;
     }
 }
 
